@@ -28,13 +28,13 @@
 180 PRINT "       3- List Income"
 190 PRINT "       4- List Expense"
 200 PRINT "       5- Monthly Figures"
-205 PRINT "       6- CAT. Spending"
-207 PRINT "       7- CAT. Income"
+205 PRINT "       6- Cat. Spending"
+207 PRINT "       7- Cat. Income"
 210 PRINT "       8- Categories"
 220 PRINT "-------------------------------"
-230 PRINT USING "Income Total";:PRINT @ 21+32*11, "";:PRINT USING "$$#####.##";IT
-240 PRINT USING "Debt Total";:PRINT @ 21+32*12, "";:PRINT USING"$$#####.##";DT
-250 PRINT USING "GRAND TOTAL";:PRINT @ 21+32*13, "";:PRINT USING "$$#####.##";GT:PRINT ""
+230 PRINT USING "Income Total >>>";:PRINT @ 21+32*11, "";:PRINT USING "$$#####.##";IT
+240 PRINT USING "Debt Total   >>>";:PRINT @ 21+32*12, "";:PRINT USING"$$#####.##";DT
+250 PRINT USING "Cash Flow    >>>";:PRINT @ 21+32*13, "";:PRINT USING "$$#####.##";GT:PRINT ""
 260 A$=INKEY$
 270 IF A$="1" THEN 1000
 280 IF A$="2" THEN 2000
@@ -250,7 +250,7 @@
 7570 NEXT X
 7800 RETURN
 
-8000 CLS:PRINT "       Categories"
+8000 CLS:PRINT "          Categories"
 8005 OPEN "D",#1,"CAT.DAT",10:QQ=0:LO=64
 8010 IF LOF(1) <1 THEN QQ=99:CLOSE#1:GOTO 8530
 8020 FIELD #1,10 AS CT$
@@ -381,12 +381,12 @@
 12120 GOTO 12100
 
 12500 CLS 
-12505 PRINT @ 40,"CoCo2 VDG6847T1"
+12505 PRINT @ 40,"CoCo2 VDG-6847T1"
 12510 PRINT @ 199, "INCOME vs EXPENSE"
 12520 PRINT @ 233, "Programmed by"
 12530 PRINT @ 266, "R. Scharmen"
 12535 PRINT @ 301, "2024"
-12540 FOR X=1 TO 2100
+12540 FOR X=1 TO 2500
 12550 NEXT
 12560 RETURN
 
